@@ -1,5 +1,8 @@
 2024-04-17  NIIBE Yutaka  <gniibe@fsij.org>
 
+	* entry-riscv32.c (chx_entry): Fix initial jump.
+	* example-lcd/sample.ld.gd32vf103 (__global_pointer$): Fix.
+
 	* rules.mk (LDFLAGS): Fix for newer GCC and picolibc.
 
 2023-09-05  NIIBE Yutaka  <gniibe@fsij.org>

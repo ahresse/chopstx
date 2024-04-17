@@ -38,7 +38,8 @@ chx_entry (void)
 {
   /* Start at 0x00000000 (alias 0x08000000), interrupt masked */
   asm volatile (
-	"li	a0,0x0800000c\n\t"
+	"lui	a0,0x08000\n\t"
+	"add	a0,a0,8\n\t"
         "jr	a0\n\t"		/* Jump to physical address */
         ".align	2\n\t"
     ".option push\n"
