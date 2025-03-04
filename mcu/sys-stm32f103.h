@@ -14,6 +14,7 @@
 #define BOARD_ID_NITROKEY_START    0xad1e7ebd
 #define BOARD_ID_GNUKEY_DS         0x67ee65a3
 #define BOARD_ID_LONGAN_NANO       0xe65dace7
+#define BOARD_ID_BLUE_PILL_PLUS    0x49403d56
 
 extern const uint8_t sys_version[8];
 #if defined(USE_SYS3) || defined(USE_SYS_BOARD_ID)

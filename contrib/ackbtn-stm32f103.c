@@ -75,6 +75,15 @@ ackbtn_init (chopstx_intr_t *intr)
       pin_config |= PINCFG_EDGE_RISING;
       break;
 
+    case BOARD_ID_BLUE_PILL_PLUS:
+      /* PA0 is connected to a switch as pull down */
+      afio_exticr_index = 0;
+      afio_exticr_extiX_pY = AFIO_EXTICR1_EXTI0_PA;
+      irq_num = EXTI0_IRQ;
+      pin_config = 0x0001;
+      pin_config |= PINCFG_EDGE_RISING;
+      break;
+
     case BOARD_ID_FST_01SZ:
     default:
       /* PA3 is connected to a hall sensor DRV5032FA */
